@@ -1,3 +1,6 @@
+# Página del festival
+    https://maiteflm18.github.io/Festival_Urban_Fest_MaiteLoyarte/index.html
+    
 # <<< PROYECTO EVENTO MUSICAL - Nafarroa Urban Fest >>>
 
 En este proyecto se realiza una página web para un festival musical, implementando **Bootstrap 4 compilado desde SASS**, con variables personalizadas, mapas de colores, tipografías locales y animaciones CSS3. No se utiliza el archivo CSS del CDN, siguiendo los requisitos del enunciado.

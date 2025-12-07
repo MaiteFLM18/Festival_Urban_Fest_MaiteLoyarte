@@ -1,0 +1,21 @@
+{
+  "name": "loyarte-nafarroa-urban-fest",
+  "version": "1.0.0",
+  "description": "Landing Nafarroa Urban Fest (Bootstrap 4 compilado desde SASS).",
+  "scripts": {
+    "build:css": "sass --no-source-map scss/style.scss css/style.css",
+    "minify:css": "postcss css/style.css -o css/style.min.css",
+    "build": "npm run build:css && npm run minify:css"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.1.0",
+    "bootstrap": "v4.6"
+  },
+  "devDependencies": {
+    "sass": "^1.94.2",
+    "postcss": "^8.4.0",
+    "postcss-cli": "^9.1.0",
+    "cssnano": "^5.1.0",
+    "autoprefixer": "^10.4.0"
+  }
+}

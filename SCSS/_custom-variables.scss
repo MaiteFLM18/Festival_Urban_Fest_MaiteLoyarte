@@ -1,0 +1,557 @@
+// Variables globales
+:root {
+    --tamano-Fuente: 13px;
+    --color-fondo: #0D0D0D;
+    --color-fondo-seccion: #212038;
+    --color-artistas: #7c2c60;
+    --color-texto: #fff;
+    --color-destacado: #ffc62e;
+    --color-links: #F9833A;
+    --color-btn: #E45C54;
+    --color-btn2: #972A24;
+    --estilo-fuente1: "BebasNeue", sans-serif;
+    --estilo-fuente2: "Raleway", sans-serif;
+
+    $font-family-base: "Raleway", sans-serif;
+    $font-family-headings: "BebasNeue", sans-serif;
+
+    $btn-border-radius: .5rem;
+    $btn-padding-y: .75rem;
+    $btn-padding-x: 2rem;
+
+    $navbar-dark-color: #ffc62e;
+    $navbar-dark-hover-color: #fff;
+    $navbar-padding-y: .8rem;
+}
+
+// Reset y estilos base
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+* img {
+    max-width: 360px;
+    height: auto;
+}
+
+body {
+    font-family: var(--estilo-fuente2);
+    font-size: var(--tamano-fuente);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+.logo {
+    height: auto;
+    width: 200px;
+}
+
+// Header
+header {
+    background-color: rgba(0, 0, 0, 0.9);
+
+    a {
+        color: #e6c613;
+        text-decoration: none;
+        font-family: var(--estilo-fuente1);
+        font-size: 1.1rem;
+        font-weight: 600;
+        display: block;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: rgba(255, 215, 0, 0.2);
+        }
+    }
+
+    .nav-link.active {
+        color: var(--color-destacado);
+        font-weight: bold;
+    }
+}
+
+.hero {
+    background: url("../assets/img/festivalaaaa.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 3rem 0;
+
+    .title {
+        font-family: var(--estilo-fuente1);
+        color: #000000;
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+        line-height: 1;
+        margin: 0;
+        font-size: 2rem;
+        text-align: center;
+        -webkit-text-stroke: 1px var(--color-destacado);
+
+        @media (min-width: 768px) {
+            font-size: 3.5rem;
+        }
+
+        @media (min-width: 1200px) {
+            font-size: 5rem;
+            text-align: left;
+        }
+    }
+
+    .description {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 1rem;
+        border-radius: 10px;
+        color: white;
+        margin-top: 1rem;
+        font-size: 1rem;
+        text-align: center;
+
+        @media (min-width: 992px) {
+            margin-top: 0;
+            margin-left: 2rem;
+            font-size: 1.25rem;
+            text-align: left;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .row {
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+        }
+    }
+}
+
+// Ticket 
+.ticket-section {
+    background: linear-gradient(to bottom, rgba(58, 35, 135, 0.9), rgba(54, 33, 123, 0.9));
+    background-size: cover;
+    padding: 4rem 2rem;
+    text-align: center;
+
+    .ticket-container {
+        display: inline-block;
+        background-color: var(--color-fondo-seccion);
+        padding: 2rem 4rem;
+        border-radius: 50px;
+        margin: 0 auto;
+
+        h2 {
+            font-family: var(--estilo-fuente1);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-destacado);
+            font-weight: 600;
+        }
+
+        button {
+            background-color: var(--color-btn);
+            color: #000000;
+            padding: 1rem 3rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            -webkit-text-stroke: 0.8px var(--color-btn2);
+            cursor: pointer;
+            border-radius: 8px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: #000000 0px 5px 5px;
+        }
+
+        button:active {
+            background-color: var(--color-btn2);
+            -webkit-text-stroke: 0.8px var(--color-btn);
+            font-size: 1.5rem;
+        }
+
+        .ticket-description {
+            color: var(--color-destacado);
+            font-size: 1.1rem;
+            margin-top: 1rem;
+        }
+    }
+}
+
+// Horario
+.horario {
+    background-color: var(--color-fondo-seccion);
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url(../assets/img/fondo3.png) repeat;
+        opacity: 0.22;
+        animation: estrellas 18s linear infinite;
+        transform: scale(1.3);
+    }
+
+    @keyframes estrellas {
+        0% {
+            background-position: 0 0;
+        }
+
+        100% {
+            background-position: 800px 600px;
+        }
+    }
+
+    h2 {
+        font-family: var(--estilo-fuente1);
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #000000;
+        text-align: center;
+        font-weight: 900;
+        -webkit-text-stroke: 1.2px var(--color-destacado);
+    }
+
+    .horario-toggle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    tr {
+        color: var(--color-destacado);
+        font-size: 1.5rem;
+        font-family: var(--estilo-fuente1);
+    }
+}
+
+// Artists
+.artists {
+    background: linear-gradient(to bottom,
+            rgba(42, 11, 145, 0.9),
+            rgba(62, 43, 124, 0.9),
+            rgba(71, 52, 133, 0.9));
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    background-size: cover;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        background: url('../assets/img/fondo.png') no-repeat center center;
+        background-size: cover;
+        opacity: 0.22;
+        animation: fuegosAnimados 20s ease-in-out infinite;
+    }
+
+    /* Animación para los fuegos artificiales */
+    @keyframes fuegosAnimados {
+        0% {
+            opacity: 0;
+            transform: scale(0.8);
+        }
+
+        20% {
+            opacity: 0.2;
+            transform: scale(1.1);
+        }
+
+        100% {
+            opacity: 0;
+            transform: scale(1.3);
+        }
+    }
+
+    h2 {
+        font-family: var(--estilo-fuente1);
+        font-size: 2.5rem;
+        color: #000000;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        font-weight: 900;
+        -webkit-text-stroke: 1.2px var(--color-destacado);
+    }
+
+    p {
+        font-family: var(--estilo-fuente2);
+        font-size: 1.2rem;
+        color: var(--color-texto);
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    .row {
+        margin-bottom: 1rem;
+
+        img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 10px;
+            border: 3px solid var(--color-destacado);
+        }
+
+        .lista_Canciones {
+            background-color: #D9D9D9;
+            border: 2px solid #322b06;
+            border-radius: 0;
+
+            h3 {
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+                color: var(--color-destacado);
+                padding: 10px;
+                background-color: #000000;
+            }
+
+            ol {
+                padding-left: 1.5rem;
+                margin: 0 1rem 0;
+
+                li {
+                    margin-bottom: 0.5rem;
+                    color: var(--color-fondo);
+                }
+            }
+        }
+    }
+
+    .modal-artista {
+        background-color: var(--color-fondo-seccion);
+        color: #fff;
+        border-radius: 15px;
+    }
+
+    .modal-artista .modal-title {
+        color: #ffcc00;
+        font-weight: bold;
+    }
+
+    #modalArtistaDesc {
+        color: var(--color-texto);
+    }
+
+    #modalArtistaImg {
+        border-radius: 10px;
+    }
+
+}
+
+// Video y audios
+.multimedia {
+    background-color: var(--color-fondo-seccion);
+    padding: 3rem 2rem;
+    text-align: center;
+
+    h2 {
+        font-family: var(--estilo-fuente1);
+        font-size: 2.7rem;
+        margin-bottom: 2rem;
+        color: #000000;
+        font-weight: 900;
+        -webkit-text-stroke: 0.8px var(--color-destacado);
+    }
+
+    video,
+    audio {
+        border: 2px solid var(--color-destacado);
+        border-radius: 10px;
+        width: 100%;
+        height: 50%;
+    }
+
+    p {
+        font-family: var(--estilo-fuente2);
+        font-size: 1.2rem;
+        color: var(--color-texto);
+        font-weight: bold;
+        margin-top: 1rem;
+
+    }
+
+    li {
+        list-style: none;
+    }
+
+    a {
+        color: var(--color-links);
+    }
+}
+
+.sponsors-carrusel {
+    background-color: var(--color-fondo-seccion);
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: url(../assets/img/fondo3.png) repeat;
+        opacity: 0.22;
+        animation: estrellas 18s linear infinite;
+        transform: scale(1.3);
+        z-index: 0;
+    }
+
+    @keyframes estrellas {
+        from {
+            background-position: 0 0;
+        }
+
+        to {
+            background-position: 800px 600px;
+        }
+    }
+
+    h2 {
+        font-family: var(--estilo-fuente1);
+        font-size: 2.3rem;
+        margin-bottom: 2rem;
+        color: #000;
+        font-weight: 900;
+        -webkit-text-stroke: 1.2px var(--color-destacado);
+        position: relative;
+        z-index: 1;
+    }
+
+    .sponsor-logos-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        padding: .5rem 0;
+        position: relative;
+        z-index: 1;
+
+        img {
+            height: 90px;
+            filter: drop-shadow(0 0 5px rgba(0, 0, 0, .5));
+            transition: transform .3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+// Info
+.info-ubi {
+    padding: 5rem 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+
+    .event-info {
+        background-color: var(--color-fondo-seccion);
+        padding: 2rem;
+        border-radius: 10px;
+        justify-content: center;
+        flex: 1 1 300px;
+        max-width: 600px;
+
+        h3 {
+            font-family: var(--estilo-fuente1);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--color-destacado);
+        }
+    }
+
+    .mapa {
+        background-color: var(--color-fondo-seccion);
+        padding: 1rem;
+        border-radius: 10px;
+        flex: 1 1 300px;
+        max-width: 600px;
+        text-align: center;
+
+        h3 {
+            font-family: var(--estilo-fuente1);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--color-destacado);
+        }
+
+        .map-wrapper {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+    }
+}
+
+/* Ajustes responsivos adicionales */
+@media (max-width: 768px) {
+    .info-ubi {
+        padding: 2rem 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event-info,
+    .mapa {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .info-ubi {
+        padding: 5rem 5rem;
+    }
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+
+    span {
+        font-family: var(--estilo-fuente2);
+        font-size: 1rem;
+        color: var(--color-destacado);
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 1rem;
+
+        a {
+            font-size: 2rem;
+        }
+    }
+}
+
+// Footer
+footer {
+    background-color: var(--color-fondo);
+    padding: 2rem;
+    gap: 2rem;
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-top: 15px;
+
+        a {
+            color: var(--color-links);
+            text-decoration: none;
+        }
+
+        img {
+            margin-top: 10px;
+            align-items: end;
+        }
+    }
+}

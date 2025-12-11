@@ -1,24 +1,18 @@
 {
-    "liveSassCompile.settings.compileOnWatch": false,
     "liveSassCompile.settings.formats": [
         {
             "format": "expanded",
             "extensionName": ".css",
             "savePath": "~/../css",
-            "savePathReplacementPairs": {
-                "/SASS/": "/CSS/"
-            },
+            "savePathReplacementPairs": null,
               "generateMap": false
         },
         {
             "format": "compressed",
             "extensionName": "-min.css",
             "savePath": "~/../css",
-            "savePathReplacementPairs": {
-                "/SASS/": "/CSS/"
-            },
             "generateMap": false
         }
-    ],
-    "liveSassCompile.settings.autoprefix": []
-}
+
+    ]
+  }

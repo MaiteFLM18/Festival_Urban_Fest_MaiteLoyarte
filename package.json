@@ -1,21 +1,25 @@
 {
-  "name": "loyarte-nafarroa-urban-fest",
+  "name": "festival",
   "version": "1.0.0",
-  "description": "Landing Nafarroa Urban Fest (Bootstrap 4 compilado desde SASS).",
+  "description": "https://maiteflm18.github.io/Festival_Urban_Fest_MaiteLoyarte/index.html",
+  "main": "index.js",
   "scripts": {
-    "build:css": "sass --no-source-map scss/style.scss css/style.css",
-    "minify:css": "postcss css/style.css -o css/style.min.css",
-    "build": "npm run build:css && npm run minify:css"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaiteFLM18/Festival_Urban_Fest_MaiteLoyarte.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/MaiteFLM18/Festival_Urban_Fest_MaiteLoyarte/issues"
+  },
+  "homepage": "https://github.com/MaiteFLM18/Festival_Urban_Fest_MaiteLoyarte#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
     "bootstrap": "v4.6"
-  },
-  "devDependencies": {
-    "sass": "^1.94.2",
-    "postcss": "^8.4.0",
-    "postcss-cli": "^9.1.0",
-    "cssnano": "^5.1.0",
-    "autoprefixer": "^10.4.0"
   }
 }

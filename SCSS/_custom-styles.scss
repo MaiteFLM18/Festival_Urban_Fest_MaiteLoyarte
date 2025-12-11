@@ -1,12 +1,15 @@
-@import "./node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 // Importa los estilos de la página
-@import "/SCSS/custom-variables";
-@import "../CSS/estilos.css";
+@import "_custom-variables.scss";
 
 // Importa fuentes de texto
-@import "/SCSS/custom-fonts";
+@import "_custom-fonts.scss";
 
 // Importa iconos
-@import "~@fortawesome/fontawesome-free/css/all.css";
+$fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
+
 @import "~bootstrap-icons/font/bootstrap-icons.css";

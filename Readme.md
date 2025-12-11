@@ -16,34 +16,54 @@ Toda la personalización se ha realizado mediante variables SASS, overrides, imp
 
     ```scss
         :root {
-            --tamano-Fuente: 13px;
-            --color-fondo: #0D0D0D;
-            --color-fondo-seccion: #212038;
-            --color-artistas: #7c2c60;
-            --color-texto: #fff;
-            --color-destacado: #ffc62e;
-            --color-links: #F9833A;
-            --color-btn: #E45C54;
-            --color-btn2: #972A24;
-            --estilo-fuente1: "BebasNeue", sans-serif;
-            --estilo-fuente2: "Raleway", sans-serif;
-        }
+    --tamano-Fuente: 13px;
+    --color-fondo: #0D0D0D;
+    --color-fondo-seccion: #212038;
+    --color-artistas: #7c2c60;
+    --color-texto: #fff;
+    --color-destacado: #ffc62e;
+    --color-links: #F9833A;
+    --color-btn: #E45C54;
+    --color-btn2: #972A24;
+    --estilo-fuente1: "BebasNeue", sans-serif;
+    --estilo-fuente2: "Raleway", sans-serif;
+
+    $font-family-base: "Raleway", sans-serif;
+    $font-family-headings: "BebasNeue", sans-serif;
+
+    $btn-border-radius: .5rem;
+    $btn-padding-y: .75rem;
+    $btn-padding-x: 2rem;
+
+    $navbar-dark-color: #ffc62e;
+    $navbar-dark-hover-color: #fff;
+    $navbar-padding-y: .8rem;
+}
     ```
 # 2- Se ha personalizado el HTML con Bootstrap mediante SASS, se importaron en el documento _custom-styles.scss
 
     ```scss
-    @import "./node_modules/bootstrap/scss/bootstrap";
-    @import "/SCSS/custom-variables";
-    @import "../CSS/estilos.css";
-    @import "/SCSS/custom-fonts";
-    @import "~@fortawesome/fontawesome-free/css/all.css";
+    @import "../node_modules/bootstrap/scss/bootstrap";
+
+    // Importa los estilos de la página
+    @import "_custom-variables.scss";
+
+    // Importa fuentes de texto
+    @import "_custom-fonts.scss";
+
+    // Importa iconos
+    $fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts";
+    @import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+    @import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
+    @import "../node_modules/@fortawesome/fontawesome-free/scss/brands";
+
     @import "~bootstrap-icons/font/bootstrap-icons.css";
     ```
     Desde el archivo _custom-variables.scss se han sobreescrito los distintos estilos de Bootstrap.
 
 # 3- Utilicé animaciones de CSS3 para las secciones de artistas, horario y sponsors.
-    ```scss
 
+    ```scss
         - Fondo de estrellas
         @keyframes estrellas {
         0% { background-position: 0 0; }
